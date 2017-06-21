@@ -1,24 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  Link
+} from 'react-router-dom';
 
 class ListItem extends React.Component {
 
+  _renderHeadPic(){
+    const pic = this.props.headPic;
+    if(pic) return(<img src={pic} alt="" className="headPic"/>);
+
+  }
+  _renderSummary(){
+    const s = this.props.summary;
+    if(s) return(<summary>{s}</summary>);
+
+  }
+
+  _getLink(){
+    const { title, type } = this.props;
+    const p = title.toLowerCase().replace(/ /g,'-');
+    var str = '-------${title}-----${type}';
+    console.log(str);
+    return ["/",type,"/",p].join("");
+  }
+
   render() {
     // eslint-disable-next-line
-    let {id, title,summary , headPic, author, time, type, category, tag, path, className} = this.props;
-    path = "/publicContent"+path;
-    let headPicDom = {},
-        summaryDom = {};
-    if(headPic) headPicDom = (<img src={headPic} alt="" className="headPic"/>);
+    const { id, title, author, time, type, category, tag, path, className } = this.props;
 
-    if(summary) summaryDom = (<summary>{summary}</summary>);
     return(
         <div className={className}>
-          {headPicDom}
-          <title>{title}</title>
-          {summaryDom}
+          {this._renderHeadPic()}
+          <Link to={this._getLink()} className="title">{title}</Link>
+          {this._renderSummary()}
           <div className="info">
-            <time datetime={time} pubdate>{time}</time>
+            <time dateTime={time}>{time}</time>
           </div>
         </div>
     )

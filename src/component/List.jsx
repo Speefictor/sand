@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Item  from './ListItem';
 
+
 class List extends React.Component {
 
   constructor(props) {
@@ -22,7 +23,7 @@ class List extends React.Component {
   }
   _load(){
     this.props.loadData(this.state.pageNumber, (data)=>{
-      this.setState({data});
+      this.setState({data:data});
     });
   }
   _loadMore(){
@@ -50,7 +51,7 @@ class List extends React.Component {
         {
           this.state.data.list.map((item, index)=>{
             return(
-              <Item {...item}></Item>
+              <Item {...item} key={index}></Item>
             );
           })
         }
