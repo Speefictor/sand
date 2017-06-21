@@ -11,6 +11,9 @@ class App extends Component {
       tt:1112222,
       zznub:0
     };
+
+    
+
   }
   componentDidMount() {
     let t = this;
