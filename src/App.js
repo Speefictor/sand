@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import Markdown from 'react-markdown';
+//import logo from './logo.svg';
 import './App.css';
 import Home from './component/pages/Home';
-import Detail from './component/pages/ArticleDetail';
+import Post from './component/pages/PostDetail';
+import Page from './component/pages/PageDetail';
 import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Link,
+  Route
 } from 'react-router-dom'
 
 class App extends Component {
@@ -33,12 +33,21 @@ class App extends Component {
   // }
   render() {
     return (
-      <Router>
-        <div>
-          <Route exact path="/" component={Home}/>
-            <Route exact path="/post/:title" component={Detail}/>
-        </div>
-      </Router>
+      <div>
+        <Router>
+          <div>
+            <li>
+              <ul>
+                <Link to="/">Home</Link>
+              </ul>
+            </li>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/post/:title" component={Post}/>
+            <Route exact path="/page/:title" component={Page}/>
+          </div>
+        </Router>
+      </div>
+
     );
   }
 }

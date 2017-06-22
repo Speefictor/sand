@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Item  from './ListItem';
+import Loading from './Loading';
 
 
 class List extends React.Component {
@@ -38,7 +39,7 @@ class List extends React.Component {
   render() {
     if(!this.state.data){
       return(
-        <div className="loading">Loading List......</div>
+        <Loading/>
       )
     }
     if(this.state.data.list.length === 0){

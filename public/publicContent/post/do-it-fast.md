@@ -1,8 +1,8 @@
-Title: "Do" it fast!
-Author: Tim Caswell
-Date: Mon Feb 22 2010 10:52:08 GMT-0600 (CST)
-Node: v0.1.102
-
+{"title": "\"Do\" it fast!",
+"author": "Tim Caswell",
+"time": "Mon Feb 22 2010 10:52:08 GMT-0600 (CST)"
+}
+-------------------[[separate]]------------------------
 Now with the release of [Node v0.1.30][] there is even more need for a library like [Do][].  While working with the node community to decide on the best alternative to node promises, we decided that it's best left to library developers.  So as of this morning, node no longer ships with promises, but uses a simple callback interface for all async functions.
 
 I took my async library that I've been developing throughout the Control Flow series and made it into a real library called [Do][].

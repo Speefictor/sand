@@ -1,7 +1,9 @@
-Title: Blog rolling with mongoDB, express and Node.js
-Author: Ciaran Jessup
-Date: Thu Feb 18 2010 21:28:42 GMT+0000 (UTC)
-Node: v0.4.10
+{
+"title": "Blog rolling with mongoDB, express and Node.js",
+"author": "Ciaran Jessup",
+"time": "Thu Feb 18 2010 21:28:42 GMT+0000 (UTC)",
+}
+-------------------[[separate]]------------------------
 
 > Article and Code updated by [loarabia (Larry Olson)][loarabiaSite].
 > Article and Code updated by Toby Clemson
@@ -125,7 +127,7 @@ The layout of express applications is fairly familiar and is usually of the form
     |-- public              /* Publicly accessible resources            */
     |   |-- images
     |   `-- javascripts
-    |   `-- stylesheets 
+    |   `-- stylesheets
     `-- views               /* The templates for the 'views'            */
 
 ###Of providers and data###
@@ -142,7 +144,7 @@ If the app is re-run and you browse to [localhost:3000][] you will see the objec
 
 ###A view to a kill###
 
-Now we have a way of reading and storing data (patience, memory is only the beginning!) we'll want a way of displaying and creating the data properly. Initially we'll start by just providing an index view of all the blog articles. 
+Now we have a way of reading and storing data (patience, memory is only the beginning!) we'll want a way of displaying and creating the data properly. Initially we'll start by just providing an index view of all the blog articles.
 Fortunately the `express` command we executed earlier to bootstrap our blogging application has already constructed a layout and an index page for us to use.  The layout file is Ok as it is, but we need to adjust the index page to look as follows: (be very careful about the indentation, that first lines should be up against the left-hand margin!):
 
 <express-mongodb/views/index.jade>
@@ -330,7 +332,7 @@ __Fin__.
 [new post]: http://localhost:3000/blog/new
 [document orientated]: http://en.wikipedia.org/wiki/Document-oriented_database
 [relational]: http://en.wikipedia.org/wiki/Relational_database_management_system
-[jade]: http://jade-lang.com/ 
+[jade]: http://jade-lang.com/
 [stylus]: http://learnboost.github.com/stylus/
 [node-mongodb-native]: http://github.com/christkv/node-mongodb-native
 [surrogate]: http://en.wikipedia.org/wiki/Surrogate_key

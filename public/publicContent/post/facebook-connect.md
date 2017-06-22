@@ -1,9 +1,9 @@
-Title: Facebook Connect with Node
-Author: Dominiek ter Heide
-Date: Thu Mar 18 2010 22:00:00 GMT+0000 (UTC)
-Node: v0.1.31
-
-A big part of building a new web application is repurposing common patterns, one such pattern is the ability for users to sign in and out. One way of solving this quickly is by using Facebook Connect. 
+{"title": "Facebook Connect with Node",
+"author": "Dominiek ter Heide",
+"date": "Thu Mar 18 2010 22:00:00 GMT+0000 (UTC)"
+}
+-------------------[[separate]]------------------------
+A big part of building a new web application is repurposing common patterns, one such pattern is the ability for users to sign in and out. One way of solving this quickly is by using Facebook Connect.
 
 ## Background
 
@@ -28,7 +28,7 @@ You need to install both [NodeJS][] and the [Express Web Framework][]. Assuming 
     cd lib/support/express
     git submodule init
     git submodule update
-    
+
 Second, you need to include [Hashlib][] into your project and compile it. Hashlib is a library that provides cryptographic routines like MD5:
 
     git submodule add git://github.com/brainfucker/hashlib.git lib/support/hashlib
@@ -79,7 +79,7 @@ The provided jQuery plugin provides the following functions that we'll be using:
 First we start out with a simple skeleton that loads jQuery and the Facebook JS library. Please note that you need the div named *fb-root* right after the body tag for Facebook's lib to work:
 
     <html>
-     <head> 
+     <head>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
         <script type="text/javascript" src="/javascripts/jquery.facebook.js"></script>
       </head>
@@ -88,9 +88,9 @@ First we start out with a simple skeleton that loads jQuery and the Facebook JS 
         <div id="fb-root"></div>
         <script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php"></script>
 
-      </body> 
+      </body>
     </html>
-  
+
 Now let's implement a basic UI:
 
 <facebook-connect/index.html>
@@ -100,7 +100,7 @@ Now let's implement a basic UI:
 The [Express][] plugin is initialized like any other plugin in the environment configuration routine, but takes your Facebook API key and Secret as mandatory initialization arguments:
 
     use(require('facebook').Facebook, {
-      apiKey: 'FACEBOOK_API_KEY', 
+      apiKey: 'FACEBOOK_API_KEY',
       apiSecret: 'FACEBOOK_API_SECRET'
     })
 
@@ -115,7 +115,7 @@ Here is an example Express application that uses no persistent storage:
 <facebook-connect/app.js>
 
 >The verification of Facebook data by the server-side is done by using the Application Secret and the signature that's sent along with the data. First, all parameters and cookies are put together in one string and then the Application Secret is appended to it. The MD5 hash of this string should match the signature that's included. [more about verifying the signature][]
-    
+
 In any subsequently added action, you can access the Facebook Session simply like this:
 
     get('/hello', function () {

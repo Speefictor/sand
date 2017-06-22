@@ -1,8 +1,8 @@
-Title: Deploying Node Apps with Spark
-Author: Tim Caswell
-Date: Thu, 22 Jul 2010 20:44:44 GMT
-Node: v0.1.102
-
+{"title": "Deploying Node Apps with Spark",
+"author": "Tim Caswell",
+"time": "Thu, 22 Jul 2010 20:44:44 GMT"
+}
+-------------------[[separate]]------------------------
 This article will go through building a simple RESTful key/value store using [Connect][].  Then I'll explain my favorite way to host apps on [Ubuntu Server][].  This will use [upstart][] and [Spark][].  We'll setup the [node.js][] environment using the super easy [Ivy][] distribution.
 
 ## Quick Node Install using the Ivy Distribution
@@ -19,7 +19,7 @@ Assuming you have a fresh host with Ubuntu Server 32bit, we'll get a node enviro
 Now for this to work correctly Ivy's `bin` folder needs to be in your `$PATH`.  Add a line to your `.profile` file to make it automatic on login.
 
     PATH=$HOME/ivy/bin:$PATH
-    
+
 Then source your `.profile` file to get the new settings.
 
     . .profile

@@ -1,8 +1,8 @@
-Title: Flow Control in npm
-Date: 2010-08-31T22:29:18
-Author: Isaac Z. Schlueter
-node: 0.2.0
-
+{"title": "Flow Control in npm",
+"date": "2010-08-31T22:29:18",
+"author": "Isaac Z. Schlueter"
+}
+-------------------[[separate]]------------------------
 Flow control is a popular subject in NodeJS.  Since most of us learned synchronous object-oriented programming patterns in school, it can be a bit of a shift to really leverage asynchronous functional programming for all it can do.
 
 As it turns out, a great way to leverage huge chunks of the node API is to build a package manager.  npm has to do a lot of stuff with the file system, child processes, and HTTP requests to the registry.  Fetching and building packages is a lot of "laundry list" programming.  That is, the algorithms are very simple (fetch this file, put it over there, run that script, etc.), but there's a lot to do, and you've gotta make sure everything gets done right (and in the right order).

@@ -1,8 +1,8 @@
-Title: Getting Started with Express
-Author: TJ Holowaychuk
-Date: Sat, 11 Sep 2010 22:55:36 GMT
-Node: v0.2.1
-
+{"title": "Getting Started with Express",
+"author": "TJ Holowaychuk",
+"time": "Sat, 11 Sep 2010 22:55:36 GMT"
+}
+-------------------[[separate]]------------------------
 This was the second in a series of posts leading up to
 [Node.js Knockout][] on how to use [node.js][]. This post was
 written by guest author and [Node.js Knockout judge][]

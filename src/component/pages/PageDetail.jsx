@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import Markdown from 'react-markdown';
+import MDV from '../MarkdownViewer';
+import Loading from '../Loading';
 
-import {
-  Link
-} from 'react-router-dom'
 
 class ArticleDetail extends Component {
   constructor(props) {
@@ -19,17 +17,21 @@ class ArticleDetail extends Component {
   componentDidMount() {
     let {title} = this.props.match.params;
     const T = this;
-    fetch("/publicContent/post/"+title+".md").then(function(response){
+    fetch("/publicContent/page/"+title+".md").then(function(response){
       return response.text();
     }).then(function(text){
       T.setState({content:text});
     });
   }
   render() {
+    if(this.state.content){
+      return (
+        <MDV content={this.state.content}></MDV>
+      );
+    }
+
     return (
-      <article>
-        <Markdown source={this.state.content}/>
-      </article>
+      <Loading/>
     );
   }
 }
