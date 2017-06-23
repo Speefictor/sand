@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CSSTransitionGroup } from 'react-transition-group';
 //import logo from './logo.svg';
 import './App.css';
 import Home from './component/pages/Home';
@@ -61,6 +62,7 @@ class App extends Component {
               <Route exact path="/gallery" component={Home}/>
               <Route exact path="/gallery/:title" component={Gallery}/>
               <Route component={NoFound}></Route>
+              
             </Switch>
           </div>
         </Router>
