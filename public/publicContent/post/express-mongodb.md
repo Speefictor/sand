@@ -1,7 +1,7 @@
 {
 "title": "Blog rolling with mongoDB, express and Node.js",
 "author": "Ciaran Jessup",
-"time": "Thu Feb 18 2010 21:28:42 GMT+0000 (UTC)",
+"time": "Thu Feb 18 2010 21:28:42 GMT+0000 (UTC)"
 }
 -------------------[[separate]]------------------------
 

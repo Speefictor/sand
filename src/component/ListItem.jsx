@@ -21,8 +21,8 @@ class ListItem extends React.Component {
   _getLink(){
     const { title, type } = this.props;
     const p = title.toLowerCase().replace(/ /g,'-');
-    var str = `-------${title}-----${type}`;
-    console.log(str);
+    // var str = `-------${title}-----${type}`;
+    // console.log(str);
     return ["/",type,"/",p].join("");
   }
 
@@ -36,7 +36,7 @@ class ListItem extends React.Component {
           <Link to={this._getLink()} className="title">{title}</Link>
           {this._renderSummary()}
           <div className="info">
-            <TimeAgo datetime={time} local="zh_CN"></TimeAgo>
+            <TimeAgo datetime={time} locale={navigator.language.replace(/-/,'_')}></TimeAgo>
           </div>
         </div>
     )

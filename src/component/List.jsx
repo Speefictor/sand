@@ -51,9 +51,11 @@ class List extends React.Component {
       <div className="list">
         {
           this.state.data.list.map((item, index)=>{
-            return(
-              <Item {...item} key={index}></Item>
-            );
+            if(this.props.filter(item)){
+              return(
+                <Item {...item} key={index}></Item>
+              );
+            }
           })
         }
       </div>

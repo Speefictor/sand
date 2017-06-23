@@ -11,7 +11,7 @@ const MarkdownViewer = ({content}) => {
       <article>
         <header>
           <h1>{title}</h1>
-          <TimeAgo datetime={time} local="zh_CN"></TimeAgo>
+          <TimeAgo datetime={time} locale={navigator.language.replace(/-/,'_')}/>
         </header>
         <Markdown source={md}/>
       </article>

@@ -7,12 +7,18 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      listPage : 0
+      listPage : 0,
+      filter   : "all"
     };
-
 
     this._loadList = this._loadList.bind(this);
   }
+  // componentWillReceiveProps(nextProps) {
+  //
+  //   this.setState({
+  //     filter:nextProps.match.path.substr(1) || 'all'
+  //   });
+  // }
   _loadList(page, callBack){
     const APP = this;
 
@@ -33,10 +39,12 @@ class Home extends Component {
   }
 
   render() {
+    const filter = this.props.match.path.substr(1) || 'all';
+      console.log("----dataType:"+filter);
     return (
       <div className="page">
-          <h4>See List :</h4>
-          <List loadData={this._loadList}></List>
+        <h4>See List :</h4>
+        <List loadData={this._loadList} filter={(item)=>(filter==='all' || item.type === filter)}></List>
       </div>
     );
   }
