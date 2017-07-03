@@ -62,7 +62,7 @@ class App extends Component {
               <Route exact path="/gallery" component={Home}/>
               <Route exact path="/gallery/:title" component={Gallery}/>
               <Route component={NoFound}></Route>
-              
+
             </Switch>
           </div>
         </Router>
