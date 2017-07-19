@@ -1,0 +1,10 @@
+{
+  "name": "sand",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+  },
+  "bin": {
+    "sand": "./index.js"
+  }
+}
