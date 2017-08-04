@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import List from '../List';
+import HScroll from '../HorizontalScroll';
 
 
 class Home extends Component {
@@ -45,9 +46,27 @@ class Home extends Component {
       <div className="page">
         <h4>See List :</h4>
         <List loadData={this._loadList} filter={(item)=>(filter==='all' || item.type === filter)}></List>
+        <HScroll>
+          <div style={astyle}></div>
+          <div style={astyle}></div>
+          <div style={astyle}></div>
+          <div style={astyle}></div>
+          <div style={astyle}></div>
+          <div style={astyle}></div>
+          <div style={astyle}></div>
+          <div style={astyle}></div>
+          <div style={astyle}></div>
+          <div style={astyle}></div>
+        </HScroll>
       </div>
     );
   }
 }
-
+const astyle={
+  width:'15em',
+  height:'150px',
+  backgroundColor:'green',
+  marginRight:'10px',
+  border:'1px solid red'
+}
 export default Home;
