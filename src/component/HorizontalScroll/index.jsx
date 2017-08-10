@@ -4,23 +4,27 @@ export default class HorizontalScroll extends React.Component {
   render() {
     let width = 0;
     return(
-      <div style={style.wrap}>
-        <div style={style.inner}>
-          {this.props.children?(
-            this.props.children.map((e,i)=>{
+      <div style={this.props.style ? Object.assign({},this.props.style, style.wrap) : style.wrap}>
+
+        {this.props.children?(
+          this.props.children.map((e,i)=>{
               const width = e.props.style.width;
-              return(
-                React.cloneElement(e,{
+            return(
+              React.cloneElement(e,{
                   key:i,
-                  style: Object.assign({minWidth:width},e.props.style)
-                })
-              )
-            })
-          ):''}
-        </div>
+                style: Object.assign({minWidth:width},e.props.style)
+              })
+            )
+          })
+        ):''}
+
       </div>
     )
   }
+}
+
+HorizontalScroll.propTypes={
+  style: PropTypes.object
 }
 
 const style = {
@@ -28,12 +32,10 @@ const style = {
     overflowX: 'auto',
     overflowY: 'hidden',
     overflowScrolling: 'touch',
-    WebkitOverflowScrolling:'touch'
-  },
-  inner:{
-    width:'auto',
+    WebkitOverflowScrolling:'touch',
     display:'flex',
     flexDirection:'row'
+
   },
   item:{
     marginRight:'10px'

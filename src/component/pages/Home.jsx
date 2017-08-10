@@ -46,7 +46,7 @@ class Home extends Component {
       <div className="page">
         <h4>See List :</h4>
         <List loadData={this._loadList} filter={(item)=>(filter==='all' || item.type === filter)}></List>
-        <HScroll>
+        <HScroll style={{width:'350px',paddingLeft:'10px',paddingRight:'10px'}}>
           <div style={astyle}></div>
           <div style={astyle}></div>
           <div style={astyle}></div>
@@ -67,6 +67,6 @@ const astyle={
   height:'150px',
   backgroundColor:'green',
   marginRight:'10px',
-  border:'1px solid red'
+  border:'1px solid #333'
 }
 export default Home;
