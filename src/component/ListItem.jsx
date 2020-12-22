@@ -42,7 +42,7 @@ class ListItem extends React.Component {
     )
   }
 }
-ListItem.PropTypes = {
+/*ListItem.PropTypes = {
   className  : PropTypes.string,
   "id"       : PropTypes.string,
   "title"    : PropTypes.string.isRequired,
@@ -54,5 +54,5 @@ ListItem.PropTypes = {
   "category" : PropTypes.string,
   "tag"      : PropTypes.array,
   "path"     : PropTypes.string.isRequired
-}
+}*/
 export default ListItem;

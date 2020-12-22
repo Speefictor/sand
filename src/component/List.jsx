@@ -62,8 +62,8 @@ class List extends React.Component {
     )
   }
 }
-List.PropTypes = {
+/*List.PropTypes = {
   loadData   : PropTypes.func,
   data       : PropTypes.array
-}
+}*/
 export default List;

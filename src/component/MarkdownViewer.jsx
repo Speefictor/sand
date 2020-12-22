@@ -18,7 +18,7 @@ const MarkdownViewer = ({content}) => {
     )
 
 }
-MarkdownViewer.PropTypes={
+/*MarkdownViewer.PropTypes={
   content:PropTypes.string.isRequired
-}
+}*/
 export default MarkdownViewer;

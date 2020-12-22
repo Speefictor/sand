@@ -11,9 +11,6 @@ class PostDetail extends Component {
       title   : '',
       content : ''
     };
-
-
-
   }
   componentDidMount() {
     let {title} = this.props.match.params;
